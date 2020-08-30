@@ -21,9 +21,7 @@ $ python test.py
 ```
 
 
-## Design 
-
-###Note On Design
+## Note On Design
 
 I subscribed to the principles of Domain-Driven Design, Single Responsibility, and OOP; all business logic is contained in specific models. 
 
