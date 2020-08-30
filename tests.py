@@ -64,7 +64,7 @@ class MarsUnitTest(unittest.TestCase):
 	def test_rover_at(self):
 		scenarios = {
 		"Scene 1: Origin Pass" : ((10,10), (0,0), (0,0), "^"),
-		"Scene 2: Fail" : ((10,10), (0,0), (3,5), " "),
+		"Scene 2: Fail" : ((10,10), (0,0), (3,5), "."),
 		"Scene 2: Off Origin" : ((60,40), (6,10), (6,10), "^")
 		}
 
