@@ -24,6 +24,7 @@ $ python test.py
 ## Design 
 
 ###Note On Design
+
 I subscribed to the principles of Domain-Driven Design, Single Responsibility, and OOP; all business logic is contained in specific models. 
 
 I’ve written the functions to satisfy a single requirement where possible. This makes it easier to write unit tests. 
