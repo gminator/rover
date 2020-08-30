@@ -2,7 +2,7 @@
 
 The project is written as a single script to make it easy to run 
 
-# Runring The Project 
+# Run
 
 ## Animation 
 To see the rovers move across screen/grid
