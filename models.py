@@ -105,18 +105,43 @@ class Rover(object):
 		return self.degrees
 
 	def describe(self,):
+		"""
+		Describe 
+
+		Get current position of Rover
+		@return string position
+		"""
 		return "%s %s %s" % (self.x, self.y, self.heading)
 
 	@property
 	def heading(self,):
+		"""
+		Heading 
+
+		Get cardinal heading based on current bearing
+
+		@return string heading N|E|S|W
+		"""
 		return Rover.get_heading(self.degrees)
 	
 	
 	def render(self,):
+		"""
+		Render
+
+		Get visual representation of heading 
+		@return string <>^v
+		"""
 		return self.arrows(self.heading)
 
 	@staticmethod
 	def arrows(heading):
+		"""
+		Arrows 
+
+		Static config for rendering rover animation
+		@return string <>^v
+		"""
 		return {
 			"N" : "^",
 			"E" : ">",
@@ -126,6 +151,12 @@ class Rover(object):
 
 	@staticmethod
 	def get_reverse_heading(cardinal): 
+		"""
+		Reverse Heading 
+
+		Static config for converting cardinal heading to degrees
+		@return int degrees
+		"""
 		return {
 			"N" : 0,
 			"E" : 90,
@@ -135,7 +166,13 @@ class Rover(object):
 
 	@staticmethod
 	def get_heading(heading):
+		"""
+		Heading
 
+		Static config to convert degrees into cardinal heading
+		@return string heading 
+		"""
+		#Keep heading with 360 bounds
 		if heading >= 360:
 			heading -= 360
 		
@@ -178,6 +215,9 @@ class Plateau(object):
 			# print("\n".join(grid))
 
 	def print_y(self,):
+		"""
+		Render Y Axis
+		"""
 		grid = []
 
 		for y in range(0, self.y)[::-1]: 
@@ -185,10 +225,20 @@ class Plateau(object):
 		return grid
 
 	def print_x_at(self,y): 
+		"""
+		Render Y Axis
+
+		Plot rovers @ given coordinates if found
+		"""
 		points = [ self.rover_at(x, y) for x in range(0, self.x)]
 		return "".join(points)
 
 	def rover_at(self,x,y):
+		"""
+		Rover @
+
+		Find & render rover @ give coordinates
+		"""
 		for r in self.rovers:
 			if r.x == x and r.y == y:
 				return r.render()
