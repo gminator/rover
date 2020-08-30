@@ -1,20 +1,20 @@
 # Rover
 
-The project is writting a single script to make it easy to run 
+The project is written as a single script to make it easy to run 
 
-# Runing The Project 
+# Runring The Project 
 
 ## Animation 
-To see the rovers move accross screen/grid
+To see the rovers move across screen/grid
 
 ```bash
 $ python run.py
 ```
-You should see the rovers move accross the grid and change orientation as they do. 
+You should see the rovers move across the grid and change orientation as they do. 
 
 ## Unit Test
 
-Unit test will run the varios functional components
+The unit test will run the various functional components
 
 ```bash
 $ python test.py
